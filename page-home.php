@@ -86,7 +86,7 @@
                                 <div class="swiper-slide">
                                     <div class="item">
                                         <div class="content-wrapper">
-                                            <h2><?php the_sub_field('title'); ?></h2>
+                                            <?php the_sub_field('title'); ?>
                                             <p><?php the_sub_field('testimonial'); ?></p>
                                         </div>
                                     </div>
