@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
   Fancybox.bind("[data-fancybox]");
 
-  new Swiper("#optionsSwiper", {
+  new Swiper("#testimonialsSwiper , #nameSwiper, #optionSwiper", {
     loop: true,
     autoplay: {
       delay: 5000,
@@ -29,18 +29,18 @@ jQuery(document).ready(function ($) {
       disableOnInteraction: false,
     },
     pagination: {
-      el: ".testimonials-section .swiper-pagination",
+      el: ".swiper-pagination",
       clickable: true,
     },
   });
 
   const nameSwiper = new Swiper(".testimonials-section .name-swiper", {
-    // direction: "horizontal",
+    direction: "horizontal",
     loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 5000,
+    //   disableOnInteraction: false,
+    // },
     pagination: {
       el: ".testimonials-section .swiper-pagination",
       clickable: true,

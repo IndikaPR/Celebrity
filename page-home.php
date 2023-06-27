@@ -99,7 +99,7 @@
                 </div>
 
                 <div class="testimonial-image col-sm-12 col-md-6 col-lg-6">
-                    <div class="swiper name name-swiper" id="testimonialsSwiper">
+                    <div class="swiper name name-swiper" id="nameSwiper">
                         <div class="swiper-wrapper">
                             <?php while (have_rows('testimonials')) : the_row(); ?>
                                 <div class="swiper-slide">
@@ -150,8 +150,8 @@
                         <p class="circle name"><?php echo $name; ?></p>
                     <?php endif; ?>
 
-                    <div class="swiper" id="optionsSwiper">
-                        <div class="swiper-wrapper">
+                    <div class="swiper" id="optionSwiper">
+                        <div class=" swiper-wrapper">
                             <?php while (have_rows('options')) : the_row(); ?>
                                 <div class="swiper-slide">
                                     <div class="item">
