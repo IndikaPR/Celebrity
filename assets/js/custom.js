@@ -1,34 +1,6 @@
 jQuery(document).ready(function ($) {
   Fancybox.bind("[data-fancybox]");
 
-  const testimonialsSwiper = new Swiper(".testimonials-section .testimonial", {
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".testimonials-section .swiper-pagination",
-      clickable: true,
-    },
-  });
-
-  const nameSwiper = new Swiper(".testimonials-section .name-swiper", {
-    direction: "horizontal",
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".testimonials-section .swiper-pagination",
-      clickable: true,
-    },
-  });
-
-  testimonialsSwiper.controller.control = nameSwiper;
-  nameSwiper.controller.control = testimonialsSwiper;
-
   new Swiper("#optionsSwiper", {
     loop: true,
     autoplay: {
@@ -49,6 +21,34 @@ jQuery(document).ready(function ($) {
       prevEl: ".testimonials-prev",
     },
   });
+
+  const testimonialsSwiper = new Swiper(".testimonials-section .testimonial", {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".testimonials-section .swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  const nameSwiper = new Swiper(".testimonials-section .name-swiper", {
+    // direction: "horizontal",
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".testimonials-section .swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  testimonialsSwiper.controller.control = nameSwiper;
+  nameSwiper.controller.control = testimonialsSwiper;
 
   // Sticky Menu
   let windowWidth = $(window).width();
