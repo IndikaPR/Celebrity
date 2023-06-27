@@ -267,26 +267,11 @@ section.testimonials-section {
   }
 
   .row {
-    .name {
-      position: absolute;
-      top: 37%;
-      left: 45%;
-      width: 12%;
-      z-index: 5;
-    }
-
-    .col-lg-6 {
-      &:first-child {
-        border-radius: 50px 0 0 0;
-        background: #fff;
-        padding: 130px 60px;
-        margin-bottom: 46px;
-      }
-
-      &:nth-child(3) {
-        margin-top: 46px;
-        padding-left: 0;
-      }
+    .col-lg-6:first-child {
+      border-radius: 50px 0 0 0;
+      background: #fff;
+      padding: 130px 60px;
+      margin-bottom: 46px;
 
       .quottation-left {
         position: absolute;
@@ -299,6 +284,19 @@ section.testimonials-section {
         bottom: 50px;
         right: 50px;
         transform: rotate(180deg);
+      }
+    }
+
+    .col-lg-6:nth-child(2) {
+      margin-top: 46px;
+      padding-left: 0;
+
+      .name {
+        position: absolute;
+        top: 37%;
+        left: 45%;
+        width: 12%;
+        z-index: 5;
       }
     }
   }

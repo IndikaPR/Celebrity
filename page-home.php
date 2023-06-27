@@ -98,9 +98,7 @@
                     <img src="<?php echo THEME_IMAGES; ?>quottation-1.png" alt="Maya.lk" class="quottation-right">
                 </div>
 
-
-
-                <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="testimonial-image col-sm-12 col-md-6 col-lg-6">
                     <div class="swiper name name-swiper" id="testimonialsSwiper">
                         <div class="swiper-wrapper">
                             <?php while (have_rows('testimonials')) : the_row(); ?>
