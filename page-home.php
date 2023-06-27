@@ -150,7 +150,7 @@
                         <p class="circle name"><?php echo $name; ?></p>
                     <?php endif; ?>
 
-                    <div class="swiper" id="testimonialsSwiper">
+                    <div class="swiper" id="optionsSwiper">
                         <div class="swiper-wrapper">
                             <?php while (have_rows('options')) : the_row(); ?>
                                 <div class="swiper-slide">

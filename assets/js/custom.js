@@ -1,27 +1,6 @@
 jQuery(document).ready(function ($) {
   Fancybox.bind("[data-fancybox]");
 
-  // new Swiper("#testimonialsSwiper", {
-  //   loop: true,
-  //   autoplay: {
-  //     delay: 5000,
-  //     disableOnInteraction: false,
-  //   },
-
-  //   pagination: {
-  //     el: ".swiper-pagination",
-  //     clickable: true,
-  //   },
-
-  //   slidesPerView: 1,
-  //   speed: 500,
-  //   preventClicksPropagation: false,
-  //   navigation: {
-  //     nextEl: ".testimonials-next",
-  //     prevEl: ".testimonials-prev",
-  //   },
-  // });
-
   const testimonialsSwiper = new Swiper(".testimonials-section .testimonial", {
     loop: true,
     autoplay: {
@@ -49,6 +28,27 @@ jQuery(document).ready(function ($) {
 
   testimonialsSwiper.controller.control = nameSwiper;
   nameSwiper.controller.control = testimonialsSwiper;
+
+  new Swiper("#optionsSwiper", {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    slidesPerView: 1,
+    speed: 500,
+    preventClicksPropagation: false,
+    navigation: {
+      nextEl: ".testimonials-next",
+      prevEl: ".testimonials-prev",
+    },
+  });
 
   // Sticky Menu
   let windowWidth = $(window).width();
