@@ -1,29 +1,51 @@
 jQuery(document).ready(function ($) {
   Fancybox.bind("[data-fancybox]");
 
-  new Swiper("#testimonialsSwiper", {
+  // new Swiper("#testimonialsSwiper", {
+  //   loop: true,
+  //   autoplay: {
+  //     delay: 5000,
+  //     disableOnInteraction: false,
+  //   },
+
+  //   pagination: {
+  //     el: ".swiper-pagination",
+  //     clickable: true,
+  //   },
+
+  //   slidesPerView: 1,
+  //   speed: 500,
+  //   preventClicksPropagation: false,
+  //   navigation: {
+  //     nextEl: ".testimonials-next",
+  //     prevEl: ".testimonials-prev",
+  //   },
+  // });
+
+  const testimonialsSwiper = new Swiper(".testimonials-section .testimonial", {
     loop: true,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
     },
-
     pagination: {
-      el: ".swiper-pagination",
+      el: ".testimonials-section .swiper-pagination",
       clickable: true,
-    },
-
-    slidesPerView: 1,
-    speed: 500,
-    preventClicksPropagation: false,
-    navigation: {
-      nextEl: ".testimonials-next",
-      prevEl: ".testimonials-prev",
     },
   });
 
-  const testimonialsSwiper = new Swiper(".testimonials-section .testimonial");
-  const nameSwiper = new Swiper(".testimonials-section .name-swiper");
+  const nameSwiper = new Swiper(".testimonials-section .name-swiper", {
+    direction: "horizontal",
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".testimonials-section .swiper-pagination",
+      clickable: true,
+    },
+  });
 
   testimonialsSwiper.controller.control = nameSwiper;
   nameSwiper.controller.control = testimonialsSwiper;
