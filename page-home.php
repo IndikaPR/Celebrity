@@ -80,7 +80,7 @@
                     <?php if (get_field('testimonials_title')) : ?>
                         <div class="content-wrapper"><?php the_field('testimonials_title'); ?></div>
                     <?php endif; ?>
-                    <div class="swiper" id="testimonialsSwiper">
+                    <div class="swiper testimonial" id="testimonialsSwiper">
                         <div class="swiper-wrapper">
                             <?php while (have_rows('testimonials')) : the_row(); ?>
                                 <div class="swiper-slide">
@@ -98,7 +98,7 @@
                     <img src="<?php echo THEME_IMAGES; ?>quottation-1.png" alt="Maya.lk" class="quottation-right">
                 </div>
 
-                <div class="swiper name" id="testimonialsSwiper">
+                <div class="swiper name name-swiper" id="testimonialsSwiper">
                     <div class="swiper-wrapper">
                         <?php while (have_rows('testimonials')) : the_row(); ?>
                             <div class="swiper-slide">
@@ -181,9 +181,10 @@
 <?php if (get_field('consultant')) : ?>
     <section class="consultant-section" id="consultant">
         <div class="consultant">
-            <?php getImage(get_field('consultant_image'), 'full-image bg'); ?>
+            <?php getImage(get_field('consultant_image')); ?>
         </div>
-        <div class="circle-white"></div>
+        <div class=" circle-white"></div>
+
         <div class="container">
             <div class="content-wrapper">
                 <?php the_field('consultant'); ?>

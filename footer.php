@@ -38,7 +38,7 @@
 				<?php endwhile; ?>
 			</div>
 
-			<div>
+			<div class="work-address">
 				<?php if (get_field('contact_us_title', 'option')) : ?>
 					<h3 class="footer-subheading"><?php the_field('contact_us_title', 'option'); ?></h3>
 				<?php endif; ?>

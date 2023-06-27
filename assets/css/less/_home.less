@@ -191,6 +191,8 @@ section.services-section {
   text-align: center;
 
   .content-wrapper {
+    margin-bottom: 100px;
+
     .theme-btn {
       margin-top: 100px;
     }
@@ -254,9 +256,12 @@ section.testimonials-section {
   padding-top: 0 !important;
 
   .content-wrapper {
-    margin-bottom: 40px;
+    h3 {
+      margin-bottom: 0;
+    }
 
-    h2 {
+    h2,
+    p {
       margin-bottom: 40px;
     }
   }
@@ -369,8 +374,8 @@ section.options-section {
 
       .circle {
         position: absolute;
-        top: 0;
-        left: -15%;
+        top: -10px;
+        left: -115px;
         width: 230px;
         height: 230px;
 
@@ -381,7 +386,13 @@ section.options-section {
       }
 
       .theme-btn {
-        margin-top: 50px;
+        margin: 50px 0;
+      }
+
+      .content-wrapper {
+        h2 {
+          color: @team-name;
+        }
       }
     }
   }
@@ -391,12 +402,18 @@ section.consultant-section {
   background-color: @theme-bg-light;
   text-align: center;
   overflow: hidden;
-  position: relative;
 
   .consultant {
     position: relative;
-    width: 100%;
-    height: 100%;
+
+    img {
+      position: absolute;
+      top: -80px;
+      left: 0px;
+      width: 340px;
+      z-index: 5;
+      transform: rotate(21deg);
+    }
   }
 
   .container {
@@ -452,7 +469,7 @@ section.team-section {
 
     .image {
       position: relative;
-      padding-top: 120%;
+      padding-top: 100%;
       margin-bottom: 15px;
 
       img {
@@ -460,18 +477,20 @@ section.team-section {
       }
     }
 
-    h4,
-    h5 {
+    h4 {
       font-family: @font-tertiary !important;
       font-weight: 800;
       text-transform: capitalize;
       color: @team-name;
       font-size: 30px;
+      margin-bottom: 10px;
     }
 
     h5 {
-      color: @team-position;
+      font-family: @font-tertiary !important;
+      font-weight: 800;
       text-transform: uppercase;
+      color: @team-position;
       font-size: 20px;
     }
 
@@ -549,9 +568,6 @@ section.instagram-section {
       }
 
       .insta-name-parent {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 700;
-        font-size: 16px;
         background: #ed9aa2;
         border-radius: 50%;
         display: flex;
@@ -561,12 +577,15 @@ section.instagram-section {
         position: relative;
 
         .insta-name,
-        p,
-        i {
+        p {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 700;
+          font-size: 18px;
           color: #fff;
         }
 
         i {
+          color: #fff;
           font-size: 38px;
         }
       }

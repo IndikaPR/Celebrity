@@ -22,6 +22,12 @@ jQuery(document).ready(function ($) {
     },
   });
 
+  const testimonialsSwiper = new Swiper(".testimonials-section .testimonial");
+  const nameSwiper = new Swiper(".testimonials-section .name-swiper");
+
+  testimonialsSwiper.controller.control = nameSwiper;
+  nameSwiper.controller.control = testimonialsSwiper;
+
   // Sticky Menu
   let windowWidth = $(window).width();
   if (windowWidth >= 1025) {
